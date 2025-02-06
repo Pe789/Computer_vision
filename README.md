@@ -46,6 +46,7 @@
 ├── solution_pneumonia_0.ipynb
 ├── solution_pneumonia_1.ipynb
 ├── solution_pneumonia_2.ipynb
+├── solution_pneumonia_3.ipynb
 ```
 ## Usage
 ### 1. Clone the repository
@@ -76,12 +77,13 @@ Notebook based on a solution found in Kaggle.  To get started.  Can be ignored a
 -   The model contains 15,841 trainable parameters.
 -   Test results go into this order:
 ```
-    Test Accuracy: 0.86
-    Precision: 0.86
-    Recall: 0.93
-    AUC: 0.94
+    Test Accuracy: 0.90
+    Precision: 0.91
+    Recall: 0.94
+    AUC: 0.96
 ```
 - Early stopping a applied, with a patience of 5, keeping the best weights.
+- With patience set to 10, results even increased to:
 - SHAP is implemented to explain on some sample images.
 
 To try: Run the steps as shown in the notebooks.
@@ -91,15 +93,28 @@ To try: Run the steps as shown in the notebooks.
 -   This model contains 25,089 trainable parameters.
 -   Test results go into this order:
 ```
-    Test Accuracy: 0.90
-    Precision: 0.86
-    Recall: 0.99 !!! Recall on the pneumonia cases increased considerable.
+    Test Accuracy: 0.93
+    Precision: 0.93
+    Recall: 0.97
     AUC: 0.96
 ```
 - Early stopping a applied, with a patience of 2, keeping the best weights.
 
-To try: Run the steps as shown in the notebooks.  Warning, training this model takes considerable more time !
+To try: Run the steps as shown in the notebooks.  Warning, training this model takes considerable more time !  Last saved version ran over 1h.
 
+#### solution-pneumonia_3.ipynb
+-   This notebook is based on solution-pneumonia_1.ipynb, but softmax is used as last activation function instead of sigmoid.
+-   This model contains 22,114 trainable parameters.
+-   Test results go into this order:
+```
+    Test Accuracy: 0.92
+    Precision: 0.92
+    Recall: 0.92
+    AUC: 0.97
+```
+- Early stopping a applied, with a patience of 5, keeping the best weights.
+
+To try: Run the steps as shown in the notebooks.  
 
 ## Notes
     *The validation set only contains 18 images (9 normal, 9 pneumonia).  Ideally, more images should be available.
