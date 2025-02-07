@@ -83,7 +83,6 @@ Notebook based on a solution found in Kaggle.  To get started.  Can be ignored a
     AUC: 0.96
 ```
 - Early stopping a applied, with a patience of 5, keeping the best weights.
-- With patience set to 10, results even increased to:
 - SHAP is implemented to explain on some sample images.
 
 To try: Run the steps as shown in the notebooks.
